@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weather-au"
+version = "0.0.7"
+description = "Australian Weather Data (from bom.gov.au)"
+readme = "README.md"
+authors = [
+    {name = "Tony Allan", email = "tony@apms.com.au"}
+]
+license = "GPL-3.0-only"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+]
+keywords = ["weather", "australia", "bom", "bureau of meteorology"]
+requires-python = ">=3.8"
+dependencies = [
+    "beautifulsoup4",
+    "lxml",
+]
+
+[project.urls]
+Homepage = "https://github.com/tonyallan/weather-au"
+Repository = "https://github.com/tonyallan/weather-au"
+"Bug Tracker" = "https://github.com/tonyallan/weather-au/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "flake8>=6.0",
+    "build>=0.10",
+    "twine>=4.0",
+]
+
+[tool.setuptools]
+packages = ["weather_au"]
+
+[tool.setuptools.package-data]
+weather_au = ["py.typed"]
