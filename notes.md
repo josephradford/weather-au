@@ -1,16 +1,27 @@
 ## Notes to Self
 
 
-### Manual build and upload
+### Deployment to PyPI
 
-```
+Deployment is automated via GitHub Actions using trusted publishing.
+
+To release a new version:
+1. Update version in `pyproject.toml`
+2. Commit and push changes
+3. Create a GitHub Release with tag (e.g., `v0.0.8`)
+4. GitHub Actions automatically builds and publishes to PyPI
+
+See `DEPLOYMENT.md` for full details.
+
+### Manual local build (for testing)
+
+```bash
 cd ~/GitHub/weather-au
 pytest
-python3 setup.py sdist bdist_wheel
-python3 -m twine upload dist/*
+python -m build
 ```
 
-`twine` will ask for the PyPi username and password.
+The built packages will be in the `dist/` directory.
 
 
 ### Test on repl.it
