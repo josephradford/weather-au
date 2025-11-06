@@ -10,7 +10,7 @@ readme = "README.md"
 authors = [
     {name = "Tony Allan", email = "tony@apms.com.au"}
 ]
-license = "GPL-3.0-only"
+license = {text = "GPL-3.0-only"}
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
